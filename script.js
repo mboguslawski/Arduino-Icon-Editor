@@ -104,6 +104,19 @@ function scaleGrid(event) {
 	}
 }
 
+function convert() {
+	let boxes = document.querySelectorAll('.box');
+	let counter = 0;
+
+	boxes.forEach(box => {
+		if (box.classList == "box black") {
+			counter += 1;
+		}
+	});
+
+	document.getElementById("array").innerHTML = "Number of black boxes:" + counter;
+}
+
 // Create default grid
 const r = 2;
 const c = 2;

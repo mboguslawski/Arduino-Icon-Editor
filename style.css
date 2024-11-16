@@ -48,6 +48,10 @@ button {
 	line-height: 0px;
 }
 
+#array {
+	color:white;
+}
+
 .box {
 	background-color: white;
 	border: 1px solid #ccc;
