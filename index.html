@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arduino Icon Editor</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+	<div id="content">
+		<div id="title">
+			<h1>Click to Toggle Box Colors</h1>
+		</div>
+
+		<form id="grid-generator" onsubmit="generateGrid(event)">
+			<label for="Rows">Rows</label>
+			<input type="number" id="Rows" name="Rows" value="1" min="1" step="1">
+			<br>
+			<br>
+			<label for="Columns">Columns</label>
+			<input type="number" id="Columns" name="Columns" value="1" min="1" step="1">
+			<br>
+			<button type="submit">Generate</button>
+		</form>
+
+		<form id="grid-scale" onsubmit="scaleGrid(event)">
+			<label for="Scale">Scale</label>
+			<input type="number" id="Scale" name="Scale" value="1" min="1" step="1">
+			<button type="submit">Scale</button>
+		</form>
+
+		<button id="zoom-in" onclick="zoomIn()">Zoom in</button>
+		<button id="zoom-out" onclick="zoomOut()">Zoom out</button>
+
+
+
+		<br>
+		<br>
+
+		<div class="grid" id="grid"></div>
+
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>
